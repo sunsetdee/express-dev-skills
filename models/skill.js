@@ -11,8 +11,15 @@ const skills = [
     getOne,
     create,
     deleteOne,
+    update,
   };
 
+  function update(id, updatedSkill) {
+    id = parseInt(id);
+    const skill = skills.find(skill => skill.id === id);
+    Object.assign(skill, updatedSkill);
+  }
+ 
   function deleteOne(id) {
     const idx = skills.findIndex(todo => skills.id === parseInt(id));
     skills.splice(idx, 1);
