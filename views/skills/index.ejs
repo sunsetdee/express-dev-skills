@@ -5,11 +5,12 @@
       <% skills.forEach(function(s) { %>
         <li>
           <a href="/skills/<%= s.id %>"><%= s.skill %></a>
-            - 
+          - 
           <%= s.status ? 'yes' : 'no' %>
         </li>
-      <% }); %>
-    </ul>
+        <% }); %>
+      </ul>
+      <a href="/skills/new">Add Skill</a>
     
   <%- include('../partials/footer')%>
 
